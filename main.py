@@ -7,7 +7,7 @@ from google.auth.transport.requests import Request
 app = FastAPI()
 
 PROJECT_ID = "hekayti-education"
-LOCATION = "us-central1"
+LOCATION = "us-central1"   # Vertex AI region
 MODEL = "imagen-4.0-generate-001"
 
 VERTEX_ENDPOINT = (
@@ -66,3 +66,4 @@ def generate_image(data: ImageRequest):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
